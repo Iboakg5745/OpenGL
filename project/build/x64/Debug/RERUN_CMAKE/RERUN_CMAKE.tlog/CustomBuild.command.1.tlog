@@ -1,0 +1,22 @@
+^C:\USERS\GIANG\DOWNLOADS\PROJECT\BUILD\CMAKEFILES\6602568EEC9CE707E046374C79CB238B\RERUN_CMAKE.RULE
+setlocal
+del /f generated.stamp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" C:/Users/Giang/Downloads/project
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\GIANG\DOWNLOADS\PROJECT\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Giang/Downloads/project -BC:/Users/Giang/Downloads/project/build --check-stamp-file C:/Users/Giang/Downloads/project/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

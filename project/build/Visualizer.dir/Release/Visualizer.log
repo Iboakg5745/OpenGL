@@ -1,0 +1,10 @@
+﻿  Building Custom Rule C:/Users/Giang/Downloads/project/CMakeLists.txt
+  cmake_pch.cxx
+  camera.cpp
+  glutils.cpp
+  main.cpp
+  renderer.cpp
+  utils.cpp
+  window.cpp
+  Generating Code...
+  Visualizer.vcxproj -> C:\Users\Giang\Downloads\project\build\Release\Visualizer.exe
